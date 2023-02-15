@@ -1,11 +1,13 @@
 import Header from "../pages/Layout/Header";
-import SideMenu from "../pages/Layout/SideMenu";
+import MainMenu from "../pages/Layout/MainMenu";
+import Profile from "../pages/Layout/Profile";
 
 export default function Layout() {
   return (
     <>
       <Header />
-      <SideMenu />
+      <MainMenu />
+      <Profile />
     </>
   );
 }

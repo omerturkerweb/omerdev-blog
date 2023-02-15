@@ -9,6 +9,7 @@ export default function SocialsCard() {
     <>
       <div className="social-icons whitespace-nowrap">
         <a
+          rel="noreferrer"
           href="https://twitter.com/omerturkerweb"
           className="twitter-icon"
           target="_blank"
@@ -22,6 +23,7 @@ export default function SocialsCard() {
           </IconButton>
         </a>
         <a
+          rel="noreferrer"
           href="https://www.instagram.com/omerturker.dev"
           className="instagram-icon"
           target="_blank"
@@ -35,6 +37,7 @@ export default function SocialsCard() {
           </IconButton>
         </a>
         <a
+          rel="noreferrer"
           href="https://github.com/omerturkerweb"
           className="github-icon"
           target="_blank"
@@ -48,6 +51,7 @@ export default function SocialsCard() {
           </IconButton>
         </a>
         <a
+          rel="noreferrer"
           href="https://www.linkedin.com/in/%C3%B6mer-t%C3%BCrker-44a28124b/"
           className="linkedin-icon"
           target="_blank"
