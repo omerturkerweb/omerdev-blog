@@ -1,14 +1,29 @@
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { MainContext } from "../../context/MainContext";
 
 export default function MainMenu() {
-  const [value, setValue] = useState(0);
+  const { value, setValue } = useContext(MainContext);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const navigationNavLink = (to) => {
+    const navLinkToNavigate = document.querySelector(`#to-${to}`);
+    navLinkToNavigate.click();
+  };
   return (
     <>
+      <NavLink id="to-home" to="/" />
+      <NavLink id="to-html" to="/html" />
+      <NavLink id="to-css" to="/css" />
+      <NavLink id="to-javascript" to="/javascript" />
+      <NavLink id="to-react" to="/react" />
+      <NavLink id="to-typescript" to="/typescript" />
+      <NavLink id="to-tailwind" to="/tailwind" />
+      <NavLink id="to-bootstrap" to="/bootstrap" />
+      <NavLink id="to-more" to="/more" />
       <div className="mainmenu-main mt-[8%]">
         <Tabs
           className=" w-[90%] mx-auto"
@@ -17,6 +32,9 @@ export default function MainMenu() {
           aria-label="icon position tabs example"
         >
           <Tab
+            onClick={() => {
+              navigationNavLink("home");
+            }}
             className="mainmenu-icon-label"
             icon={
               <img
@@ -30,6 +48,10 @@ export default function MainMenu() {
           />
 
           <Tab
+            onClick={() => {
+              navigationNavLink("html");
+            }}
+            disabled={false}
             className="mainmenu-icon-label"
             icon={
               <img
@@ -41,7 +63,11 @@ export default function MainMenu() {
             label="HTML5"
             iconPosition="start"
           />
+
           <Tab
+            onClick={() => {
+              navigationNavLink("css");
+            }}
             className="mainmenu-icon-label"
             icon={
               <img
@@ -53,7 +79,11 @@ export default function MainMenu() {
             label="CSS3"
             iconPosition="start"
           />
+
           <Tab
+            onClick={() => {
+              navigationNavLink("javascript");
+            }}
             className="mainmenu-icon-label"
             icon={
               <img
@@ -65,7 +95,11 @@ export default function MainMenu() {
             label="JAVASCRIPT"
             iconPosition="start"
           />
+
           <Tab
+            onClick={() => {
+              navigationNavLink("react");
+            }}
             className="mainmenu-icon-label"
             icon={
               <img
@@ -78,6 +112,9 @@ export default function MainMenu() {
             iconPosition="start"
           />
           <Tab
+            onClick={() => {
+              navigationNavLink("typescript");
+            }}
             className="mainmenu-icon-label"
             icon={
               <img
@@ -90,6 +127,9 @@ export default function MainMenu() {
             iconPosition="start"
           />
           <Tab
+            onClick={() => {
+              navigationNavLink("tailwind");
+            }}
             className="mainmenu-icon-label"
             icon={
               <img
@@ -102,6 +142,9 @@ export default function MainMenu() {
             iconPosition="start"
           />
           <Tab
+            onClick={() => {
+              navigationNavLink("bootstrap");
+            }}
             className="mainmenu-icon-label"
             icon={
               <img
@@ -114,6 +157,9 @@ export default function MainMenu() {
             iconPosition="start"
           />
           <Tab
+            onClick={() => {
+              navigationNavLink("more");
+            }}
             className="mainmenu-icon-label"
             icon={
               <img

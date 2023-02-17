@@ -63,8 +63,16 @@ export default function Profile() {
           <br></br>
           <br></br>
           You can reach my previous demo projects by clicking on my{" "}
-          <span className="important-text">github</span> link and you can use
-          the social media icons to talk to me{" "}
+          <span className="important-text underline">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://github.com/omerturkerweb"
+            >
+              github
+            </a>
+          </span>{" "}
+          link and you can use the social media icons to talk to me{" "}
           <span className="important-text">about anything</span> .
         </span>
       </div>
