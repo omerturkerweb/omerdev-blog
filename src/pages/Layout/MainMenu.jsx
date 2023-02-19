@@ -1,18 +1,28 @@
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { MainContext } from "../../context/MainContext";
+import { MainContext } from "../../context/main-context/MainContext";
 
 export default function MainMenu() {
-  const { value, setValue } = useContext(MainContext);
+  const { value, setValue, setActivePath, activePath } =
+    useContext(MainContext);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   const navigationNavLink = (to) => {
     const navLinkToNavigate = document.querySelector(`#to-${to}`);
     navLinkToNavigate.click();
+    setActivePath(() => {
+      if (to.slice(0) == "home") {
+        return "blog";
+      } else return to.slice(0);
+    });
   };
+  useEffect(() => {
+    let mainTitle = document.querySelector("#main-title");
+    mainTitle.innerText = `omerturker | ${activePath}`;
+  }, [activePath]);
   return (
     <>
       <NavLink id="to-home" to="/" />

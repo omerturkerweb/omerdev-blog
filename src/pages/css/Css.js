@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MainContext } from "../../context/MainContext";
+import { MainContext } from "../../context/main-context/MainContext";
 
 export default function Css() {
   const { value, setValue } = useContext(MainContext);

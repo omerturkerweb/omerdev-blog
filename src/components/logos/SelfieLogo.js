@@ -5,7 +5,7 @@ export default function SelfieLogo() {
     <Avatar
       variant="rounded"
       alt="Ömer Türker"
-      src={require("../images/selfie/selfie.jpg")}
+      src={require("../../images/selfie/selfie.jpg")}
     />
   );
 }

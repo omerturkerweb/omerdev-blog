@@ -1,4 +1,4 @@
-import SocialsCard from "../../components/SocialsCard";
+import SocialsCard from "../../components/icon-sets/SocialsCard";
 import {
   FcGlobe,
   FcMultipleDevices,
@@ -6,6 +6,7 @@ import {
   FcSms,
   FcLeftDown2,
 } from "react-icons/fc";
+
 export default function Profile() {
   return (
     <div className="profile-main flex flex-row  shadow-md rounded-xl w-[60%] bg-white mx-auto my-11 h-[60%]">
@@ -48,7 +49,7 @@ export default function Profile() {
         <h3 className="font-heading_font_family font-extrabold text-3xl">
           Hi this is <span className="important-text">Ömer Türker</span>
         </h3>
-        <span>
+        <span className="font-post_title_ff">
           I am a <span className="important-text">front-end developer</span> . I
           have finally opened my
           <span className="important-text"> blog project</span> project, which

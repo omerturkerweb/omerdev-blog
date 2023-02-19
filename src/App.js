@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Profile from "./pages/Layout/Profile";
-import { Provider } from "./context/MainContext";
+import { Provider } from "./context/main-context/MainContext";
 import Html from "./pages/html/html";
 import Css from "./pages/css/Css";
 import Javascript from "./pages/javascript/Javascript";
@@ -27,6 +27,10 @@ function App() {
             <Route path="tailwind" element={<Tailwind />}></Route>
             <Route path="bootstrap" element={<Bootstrap />}></Route>
             <Route path="more" element={<More />}></Route>
+            <Route
+              path="/what-is-html"
+              element={<div>WHAT İS HTML KISMI</div>}
+            ></Route>
             <Route path="*" element={<Notfound />}></Route>
           </Route>
         </Routes>
